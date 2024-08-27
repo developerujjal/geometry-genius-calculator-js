@@ -21,12 +21,12 @@
                         <img src="images/triangle.png" alt="">
                     </div>
                     <div class="text-box">
-                        <h2>Triangle</h2>
+                        <h2 id="title-item1">Triangle</h2>
                         <p>Area (A) = 0.5 × b × h</p>
                     </div>
                     <div class="input-stuff">
-                        <input id="base" type="text" placeholder="b"> <span>cm</span>
-                        <input id="height" type="text" placeholder="h"> <span>cm</span>
+                        <input id="base" type="number" placeholder="b"> <span>cm</span>
+                        <input id="height" type="number" placeholder="h"> <span>cm</span>
                     </div>
                     <div class="result">
                         <h3>Result: <span id="result-count">00</span> cm<sup>2</sup></h3>
@@ -42,12 +42,12 @@
                         <img src="images/rectangle.png" alt="">
                     </div>
                     <div class="text-box">
-                        <h2>Rectangle</h2>
+                        <h2 id="title-item2">Rectangle</h2>
                         <p>Area (A) = w × l</p>
                     </div>
                     <div class="input-stuff">
-                        <input id="width" type="text" placeholder="w"> <span>cm</span>
-                        <input id="length" type="text" placeholder="l"> <span>cm</span>
+                        <input id="width" type="number" placeholder="w"> <span>cm</span>
+                        <input id="length" type="number" placeholder="l"> <span>cm</span>
                     </div>
                     <div class="result">
                         <h3>Result: <span id="result-count2">00</span> cm<sup>2</sup></h3>
@@ -63,12 +63,12 @@
                         <img src="images/parallelogram.png" alt="">
                     </div>
                     <div class="text-box">
-                        <h2>Parallelogram</h2>
+                        <h2 id="title-item3">Parallelogram</h2>
                         <p>Area (A) = b × h</p>
                     </div>
                     <div class="input-stuff">
-                        <input id="parallelogram-basic" type="text" placeholder="b"> <span>cm</span>
-                        <input id="parallelogram-height" type="text" placeholder="h"> <span>cm</span>
+                        <input id="parallelogram-basic" type="number" placeholder="b"> <span>cm</span>
+                        <input id="parallelogram-height" type="number" placeholder="h"> <span>cm</span>
                     </div>
                     <div class="result">
                         <h3>Result: <span id="result-count3">00</span> cm<sup>2</sup></h3>
@@ -84,18 +84,18 @@
                         <img src="images/rhombus.png" alt="">
                     </div>
                     <div class="text-box">
-                        <h2>Rhombus</h2>
+                        <h2 id="title-item4">Rhombus</h2>
                         <p>Area (A) = 0.5 × d<sub>1</sub> × d<sub>2</sub></p>
                     </div>
                     <div class="input-stuff">
-                        <input type="text" placeholder="d1"> <span>cm</span>
-                        <input type="text" placeholder="d2"> <span>cm</span>
+                        <input id="rhombus-basic" type="number" placeholder="d1"> <span>cm</span>
+                        <input id="rhombus-height" type="number" placeholder="d2"> <span>cm</span>
                     </div>
                     <div class="result">
-                        <h3>Result: 00 cm<sup>2</sup></h3>
+                        <h3>Result: <span id="result-count4">00</span> cm<sup>2</sup></h3>
                     </div>
                     <div class="btn-container">
-                        <button>Calculate</button>
+                        <button id="rhombus-calculate">Calculate</button>
                     </div>
 
                 </div>
@@ -105,18 +105,18 @@
                         <img src="images/pentagon.png" alt="">
                     </div>
                     <div class="text-box">
-                        <h2>Pentagon</h2>
+                        <h2 id="title-item5">Pentagon</h2>
                         <p>Area (A) = 0.5 × p × b</p>
                     </div>
                     <div class="input-stuff">
-                        <input type="text" placeholder="p"> <span>cm</span>
-                        <input type="text" placeholder="b"> <span>cm</span>
+                        <input id="pentagon-side" type="number" placeholder="p"> <span>cm</span>
+                        <input id="pentagon-length" type="number" placeholder="b"> <span>cm</span>
                     </div>
                     <div class="result">
-                        <h3>Result: 00 cm<sup>2</sup></h3>
+                        <h3>Result: <span id="result-count5">00</span> cm<sup>2</sup></h3>
                     </div>
                     <div class="btn-container">
-                        <button>Calculate</button>
+                        <button id="pentagon-calculate">Calculate</button>
                     </div>
 
                 </div>
@@ -126,18 +126,18 @@
                         <img src="images/ellipse.png" alt="">
                     </div>
                     <div class="text-box">
-                        <h2>Ellipse</h2>
+                        <h2 id="title-item6">Ellipse</h2>
                         <p>Area (A) = &#960;ab</p>
                     </div>
                     <div class="input-stuff">
-                        <input type="text" placeholder="a"> <span>cm</span>
-                        <input type="text" placeholder="b"> <span>cm</span>
+                        <input id="ellipse-semi-major" type="number" placeholder="a"> <span>cm</span>
+                        <input id="ellipse-semi-minor" type="number" placeholder="b"> <span>cm</span>
                     </div>
                     <div class="result">
-                        <h3>Result: 00 cm<sup>2</sup></h3>
+                        <h3>Result: <span id="result-count6">00</span> cm<sup>2</sup></h3>
                     </div>
                     <div class="btn-container">
-                        <button>Calculate</button>
+                        <button id="ellipse-calculate">Calculate</button>
                     </div>
 
                 </div>
@@ -145,6 +145,18 @@
             <div class="calculate-container">
                 <div class="calculate-box">
                     <h3>Area Calculation</h3>
+                </div>
+                <div class="calculate-result-output">
+
+                    <!-- <div class="one-div">
+                        <span>1.</span>
+                        <span>pentagon</span>
+                        <span>result</span>
+                        <span>
+                            <button>Conver to M<sup>2</sup></button>
+                        </span>
+                    </div> -->
+
                 </div>
             </div>
         </div>
